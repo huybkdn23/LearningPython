@@ -63,6 +63,11 @@ def circle(t, r):
 bob.penup()
 radius = 250
 square(bob, radius)
+bob.rt(90)
+bob.fd(150)
+bob.rt(90)
+bob.fd(30)
+bob.rt(180)
 bob.pendown()
 bob._delay(0.01)
 circle(bob, radius)

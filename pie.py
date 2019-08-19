@@ -49,7 +49,7 @@ def isosceles(t, r, angle):
 
 # create the world and bob
 bob = Turtle(shape='turtle')
-bob._delay(3)
+bob._delay(50)
 bob.pu()
 bob.bk(130)
 bob.pd()
@@ -60,5 +60,7 @@ draw_pie(bob, 5, size)
 draw_pie(bob, 6, size)
 draw_pie(bob, 7, size)
 draw_pie(bob, 8, size)
+screen = Screen()
+screen.exitonclick()
 
 # dump the contents of the campus to the file canvas.eps
