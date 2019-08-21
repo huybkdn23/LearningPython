@@ -21,6 +21,7 @@ def is_palindrome(word):
     if first(word) != last(word):
         return False
     return is_palindrome(middle(word))
+    #: or using one-line command: return word[::] == word[::-1]
 
 def is_power(a, b):
     if a < b:
@@ -38,7 +39,7 @@ if is_power(9,3):
     print('YES')
 else:
     print('NO')
-print(GCD(4,6))
+print(GCD(42,56))
 print(is_palindrome('allen'))
 print(is_palindrome('bob'))
 print(is_palindrome('otto'))
