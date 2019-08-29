@@ -7,6 +7,7 @@ def is_sorted(lst):
     return True
 
 def has_duplicates(lst):
+    #: or using set() function: return len(set(lst)) < len(lst)
     for element in lst:
         if lst.count(element) >= 2: return True
     return False

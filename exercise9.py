@@ -2,13 +2,20 @@ def is_matches(word1, word2):
     return word1 == word2
 
 def bisect(lst, word):
-    mid = int(len(lst) / 2)
-    if mid < 0: return
-    if word[0] > lst[mid][0]: return bisect(lst[mid + 1:], word)
-    elif word[0] < lst[mid][0]: return bisect(lst[:mid - 1], word)
-    elif word[0] == lst[mid][0] and is_matches(word, lst[mid]): return mid
-
-myList = ['huy', 'huy', '16T2', 'BKDN', 'c']
+    tmp = lst
+    while True:
+        mid = int(len(tmp) / 2)
+        if word > tmp[mid]: 
+            tmp = tmp[mid:]
+        elif word < tmp[mid]: 
+            tmp = tmp[:mid]
+        elif word == tmp[mid]: return lst.index(word)
+        
+        if len(tmp) == 1: 
+            if word == tmp[:]: return lst.index(word)
+            else: return None
+            
+myList = ['huy', 'huy', '16T2', 'BKDN', 'c', 'jhfdg', '9792834', '87oinflksdf', '2873s', '123456']
 myList.sort()
 print(myList)
-print(bisect(myList, 'c'))
+print(bisect(myList,'87oinflksdf'))

@@ -13,16 +13,16 @@ def draw_grid():
     def same_code1():
         print('{:<18}{:^1}{:>18}'.format('|', '|', '|'))
     def same_code2():
-        print('+'),
+        print('+',end=' ')
         for i in range(17):
             if i == 8:
-                print('+'),
+                print('+',end=' ')
             else:
-                print('-'),
+                print('-',end=' ')
         print('+')
     same_code2()
     for i in range(15):
-        if i == 15/2:
+        if i == int(15/2):
             same_code2()
         same_code1()
     same_code2()
@@ -35,7 +35,7 @@ def print_spam(s):
     print(s)
 
 def print_twice(s):
-    print(s),;print(s)
+    print(s, end=' ');print(s)
 
 col70('Bach Khoa DN')
 draw_table()

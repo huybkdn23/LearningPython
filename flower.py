@@ -66,7 +66,7 @@ def move(t, length):
     t.pd()
 
 bob = Turtle(shape="turtle")
-bob._delay(10)
+bob._delay(0.01)
 
 # draw a sequence of three flowers, as shown in the book.
 move(bob, -100)
